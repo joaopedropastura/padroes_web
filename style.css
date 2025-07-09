@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+   border-spacing: 0;
+  border: 2px solid #007BFF;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #e8f1ff;
+  cursor: pointer;
+}
+
+thead th {
+  padding: 10px;
+  border: 1px solid #007BFF;
+  text-align: left;
+}
+
+tbody td, tfoot td {
+  padding: 10px;
+  border: 1px solid #007BFF;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
+}
+
+td.right {
+  text-align: right;
+}
+
+td.left {
+  text-align: left;
+}
+
+.table_footer td {
+  text-align: center;
+  font-style: italic;
+  background-color: #f5faff;
+}
+
+
+thead th:first-child {
+  border-top-left-radius: 12px;
+}
+thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.table_footer td {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.filter {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 3px solid #007BFF;
+  border-radius: 12px;
+  background-color: #f5faff;
+  width: calc(100% - 2rem - 6px);
+  height: 4rem;
+  padding: 1rem
+}
+
+#filterLabel {
+  font-weight: bold;
+  color: #007BFF;
+  font-size: 1.2rem;
+
+}
+
+#filterInput {
+  padding: 8px 12px;
+  border: 1px solid #007BFF;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.2rem;
+  width: 200px;
+  transition: border 0.3s;
+}
+
+
+#clearFilter {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter button:hover {
+  background-color: #0056b3;
+}
