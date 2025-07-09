@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CMS Comparison Table</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-    <div class="filter">
-        <label id="filterLabel" for="filterInput">Filtrar:</label>
-        <input type="text" id="filterInput" placeholder="Digite para filtrar..." onkeyup="filterTable()">
-        <button id="clearFilter" onclick="clearFilter()">limpar filtro</button>
-    </div>
-   <table id="cmsTable">
-    <thead>
-      <tr>
-        <th style="width: 25%" onclick="sortTable(0)">CMS Platforms</th>
-        <th style="width: 10%" onclick="sortTable(1)">Initial release</th>
-        <th style="width: 20%" onclick="sortTable(2)">Written in</th>
-        <th style="width: 20%" onclick="sortTable(3)">g2 Ratings</th>
-        <th style="width: 25%" onclick="sortTable(4)">Starting Price</th>
-      </tr>
-    </thead>
-    <tbody id="cmsBody">
-      <!--  vem do script.js -->
-    </tbody>
-    <tfoot class="table_footer">
-      <tr>
-        <td colspan="5">
-          Tabela comparativa de plataformas CMS com base em suas características técnicas.
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS Comparison Table</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-  <script src="./script.js"></script>
-</body>
+  <body>
+    <header>
+      <h1 id="header">CMS Comparison Table</h1>
+    </header>
+    <main>
+      <div class="filter">
+        <label id="filterLabel" for="filterInput">Filtrar:</label>
+        <input
+          type="text"
+          id="filterInput"
+          placeholder="Digite para filtrar..."
+          onkeyup="filterTable()"
+        />
+        <button id="clearFilter" onclick="clearFilter()">limpar filtro</button>
+      </div>
+      <table id="cmsTable">
+        <thead>
+          <tr>
+            <th style="width: 25%" onclick="sortTable(0)">CMS Platforms</th>
+            <th style="width: 10%" onclick="sortTable(1)">Initial release</th>
+            <th style="width: 20%" onclick="sortTable(2)">Written in</th>
+            <th style="width: 20%" onclick="sortTable(3)">g2 Ratings</th>
+            <th style="width: 25%" onclick="sortTable(4)">Starting Price</th>
+          </tr>
+        </thead>
+        <tbody id="cmsBody">
+          <!--  tr vem do script.js -->
+        </tbody>
+        <tfoot class="table_footer">
+          <tr>
+            <td colspan="5">
+              Tabela comparativa de plataformas CMS com base em suas
+              características técnicas.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+
+    <footer>
+      <p>
+        Desenvolvido por João Pedro Pastura<a
+          href=""
+          target="https://github.com/joaopedropastura/padroes_web"
+          >GitHub</a
+        >
+      </p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>

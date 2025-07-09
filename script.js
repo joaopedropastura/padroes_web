@@ -149,6 +149,18 @@ function renderTable(sortedData) {
       grouped[key].prices.push(row.price.text);
     });
 
+    console.log("grouped data: ", grouped);
+
+    const  tempEntries = Object.entries(grouped);
+    console.log("grouped data entries: ", tempEntries);
+
+    const temp = Object.entries(grouped)
+      .sort(([a], [b]) => (sortAsc ? a - b : b - a))
+
+    console.log("sorted grouped data: ", temp);
+    
+    
+
     Object.entries(grouped)
       .sort(([a], [b]) => (sortAsc ? a - b : b - a))
       .forEach(([_, group]) => {
@@ -181,7 +193,9 @@ function renderTable(sortedData) {
 
         tbody.appendChild(tr);
       });
-  } else {
+  } 
+  
+  else {
     sortedData.forEach((row) => {
       const tr = document.createElement("tr");
 
@@ -219,16 +233,28 @@ function sortTable(colIndex) {
   const colMap = ["platforms", "release", "writtenIn", "ratings", "price"];
   const key = colMap[colIndex];
 
-  if (lastSortedCol === key) sortAsc = !sortAsc;
-  else sortAsc = true;
+  if (lastSortedCol === key) 
+    sortAsc = !sortAsc;
+  else 
+    sortAsc = true;
 
   lastSortedCol = key;
+
+  const sort = [...data].sort((a, b) => {
+    console.log("Sorting by a: ", a);
+    console.log("Sorting by b: ", b);
+    if (typeof valA === "number") 
+        return sortAsc ? valA - valB : valB - valA;
+  })
+
+  console.log("sort data: ",sort);
 
   const sorted = [...data].sort((a, b) => {
     const valA = a[key].value;
     const valB = b[key].value;
 
-    if (typeof valA === "number") return sortAsc ? valA - valB : valB - valA;
+    if (typeof valA === "number") 
+        return sortAsc ? valA - valB : valB - valA;
     return sortAsc
       ? valA.toString().localeCompare(valB.toString())
       : valB.toString().localeCompare(valA.toString());
@@ -237,8 +263,6 @@ function sortTable(colIndex) {
   renderTable(sorted);
 }
 
-renderTable(data);
-
 function filterTable() {
   const input = document.getElementById("filterInput");
   const filter = input.value.toLowerCase();
@@ -246,7 +270,7 @@ function filterTable() {
 
   console.log(
     "count rows: ",
-    table.getElementsByTagName("tbody")[0].getElementsByTagName("tr")
+    table.getElementsByTagName("tbody")
   );
 
   const rows = table
@@ -272,15 +296,14 @@ function filterTable() {
     let match = false;
 
     for (let j = 0; j < cells.length; j++) {
-      const cellText = cells[j].innerHTML || cells[j].innerText;
+      const cellText = cells[j].innerText;
       if (cellText.toLowerCase().includes(filter)) {
         match = true;
         break;
       }
     }
 
-    console.log("row style", rows[i].style.display);
-    
+    console.log("row style", rows[i]);
 
     rows[i].style.display = match ? "" : "none";
   }
@@ -291,3 +314,5 @@ function clearFilter() {
   input.value = "";
   filterTable();
 }
+
+renderTable(data);
