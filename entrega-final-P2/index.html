@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatório Individual</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="template">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/0/06/UTFPR_logo.svg"
+        alt="Logo da UTFPR"
+        class="logo"
+      />
+      <h1>Relatório Individual</h1>
+      <address class="identificacao">
+        <p>Universidade Tecnológica Federal do Paraná</p>
+        <p>Endereço: Av. Sete de Setembro, 3165 - Curitiba, PR</p>
+        <p>
+          Departamento:
+          <abbr title="Departamento Acadêmico de Informática">DAINF</abbr>
+        </p>
+        <p>Curso: Bacharelado em Sistemas de Informação</p>
+        <p>Disciplina: Projeto Integrador</p>
+        <p>Ano/Semestre: 2025/1</p>
+        <p>
+          Data do Relatório:
+          <time datetime="2025-07-10">10 de Julho de 2025</time>
+        </p>
+
+        <p>
+          <strong>João Pedro</strong>
+        </p>
+        <p>
+          <a href="mailto:pastura@alunos.utfpr.edu.br"
+            >pastura@alunos.utfpr.edu.br</a
+          >
+        </p>
+      </address>
+    </header>
+
+    <main>
+      <article>
+        <header>
+          <h2 class="equipe">Graphic design is my passion</h2>
+          <p>
+            <strong>Membros:</strong> Melissa Moll, João Pedro Pastura, Leandro
+            Cornelsen, André Caseiro, Isabela Tulio
+          </p>
+        </header>
+
+        <section>
+          <h3 class="tema">Dificuldade de acessibilidade digital</h3>
+        </section>
+
+        <section>
+          <h4>Objetivos do Projeto</h4>
+          <ol class="objetivos">
+            <li>
+              mostrar que símbolos, layouts e vocabulários comuns em sites não
+              são universais, apenas um grupo específico possui familiaridade
+              com eles
+            </li>
+            <li>
+              Promover conscientização sobre as dificuldades digitais e a
+              importância da usabilidade.
+            </li>
+            <li>Promover informações acessíveis de forma interativa</li>
+            <li>Fomentar debate sobre inclusão digital e sua usabilidade</li>
+          </ol>
+        </section>
+
+        <section>
+          <h4>Diagrama de Conceitos</h4>
+          <figure>
+            <img
+              src="./images/diagrama.png"
+              alt="Diagrama com os principais conceitos do projeto"
+              style="width: 80%; display: block; margin: auto"
+            />
+            <figcaption style="text-align: center; margin-top: 0.5rem">
+              <p>
+                Figura 1 – Diagrama com os principais conceitos envolvidos no
+                projeto. Fonte:
+                <a
+                  href="https://www.w3.org/TR/WCAG21/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WCAG 2.1 - Diretrizes de Acessibilidade para Conteúdo Web
+                </a>
+              </p>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section>
+          <h4>Minha Contribuição</h4>
+          <p>
+            Fui responsável pelo desenvolvimento completo da funcionalidade do
+            <strong>"Jogo dos 7 Erros"</strong>, implementada na página
+            <code>puzzle.html</code>. Essa funcionalidade permite que o usuário
+            interaja com duas imagens — uma original e uma com erros — clicando
+            nas regiões que diferem para marcá-las corretamente.
+          </p>
+          <p>Minhas principais contribuições foram:</p>
+          <ul>
+            <li>
+              Implementação da lógica de detecção de cliques em áreas com erro,
+              usando coordenadas percentuais adaptadas às dimensões da tela.
+            </li>
+            <li>
+              Controle de estado do jogo com contagem de acertos e exibição da
+              mensagem de vitória.
+            </li>
+            <li>Ativação de modo de depuração opcional para testes visuais.</li>
+            <li>
+              Integração dos botões "Voltar" e "Próximo" com funções de
+              navegação entre as páginas do projeto.
+            </li>
+            <li>Ajustes no layout e responsividade usando media queries.</li>
+            <li>Apoio ao grupo com a configuração inicial do GitHub.</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <section>
+        <p>
+          <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+              alt="Licença CC-BY"
+              class="licenca"
+            />
+            Licença Creative Commons - CC BY 4.0
+          </a>
+        </p>
+      </section>
+      <aside class="social">
+        <a
+          href="https://github.com/joaopedropastura"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="GitHub João Pedro Pastura"
+        >
+          <img
+            src="https://raw.githubusercontent.com/rdimascio/icons/932c4cf6c9e2031abeca1c164baa0f76785c16fe/icons/github.svg"
+            alt="GitHub"
+            title="GitHub"
+          />
+        </a>
+      </aside>
+
+      <section class="animation template">
+        <fieldset>
+          <p>Animação</p>
+          <label>
+            <input type="radio" name="anim" value="cabecalho" />Cabeçalho
+          </label>
+          <label> <input type="radio" name="anim" value="nome" /> Nome </label>
+          <label>
+            <input type="radio" name="anim" value="corpo" /> Corpo
+          </label>
+          <label>
+            <input type="radio" name="anim" value="rodape" /> Rodapé
+          </label>
+        </fieldset>
+      </section>
+    </footer>
+  </body>
+
+  <script src="./script.js"></script>
+</html>
